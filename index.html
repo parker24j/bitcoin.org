@@ -1,0 +1,1091 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bitcoin.org by parker24j</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Bitcoin.org</h1>
+        <p>Bitcoin.org website</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/parker24j/bitcoin.org" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/parker24j/bitcoin.org/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/parker24j/bitcoin.org/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <p><img src="https://travis-ci.org/bitcoin-dot-org/bitcoin.org.svg?branch=master" alt="Build Status"></p>
+
+<h2>
+<a id="how-to-participate" class="anchor" href="#how-to-participate" aria-hidden="true"><span class="octicon octicon-link"></span></a>How To Participate</h2>
+
+<p><em>Bitcoin.org needs volunteers like you!</em>  Here are some ways you can help:</p>
+
+<ul>
+<li>
+<p>"Watch" this repository to be notified of issues and Pull Requests
+(PRs) that could use your attention. Scroll to the top of this page
+and click the <em>Watch</em> button to get notifications by email and on your
+GitHub home page.</p>
+
+<p>Alternatively, email volunteer coordinator Dave Harding
+  <a href="mailto:dave@dtrt.org">dave@dtrt.org</a> with a short list of your interests and skills, and
+  he'll email you when there's an issue or PR that could use your
+  attention.</p>
+</li>
+<li><p>Help <a href="#developer-documentation">write new documentation</a> for the <a href="https://bitcoin.org/en/developer-documentation">developer
+documentation pages</a> or <a href="https://github.com/bitcoin-dot-org/bitcoin.org/pull/711">upcoming full node page</a>, or <strong>review <a href="https://github.com/bitcoin-dot-org/bitcoin.org/pulls?q=is%3Aopen+label%3A%22Dev+Docs%22+is%3Apr">PRs
+adding new documentation</a>.</strong> You don't need to be a Bitcoin expert
+to review a PR---these docs are written for non-experts, so we need to
+know if non-experts find them confusing or incomplete. If you review a
+PR and don't find any problems worth commenting about, leave a "Looks
+Good To Me (LGTM)" comment.</p></li>
+<li><p><a href="#adding-a-wallet">Submit new wallets</a> for the <a href="https://bitcoin.org/en/choose-your-wallet">Choose Your Wallet page</a>, or
+help us <a href="https://github.com/bitcoin-dot-org/bitcoin.org/pulls?q=is%3Aopen+label%3Awallet+is%3Apr">review wallet submissions</a>. <strong>Reviewers with Apple iOS
+hardware especially needed</strong>---email <a href="mailto:dave@dtrt.org">dave@dtrt.org</a> to
+be notified about iOS wallets needing review.</p></li>
+<li><p><a href="#how-to-translate">Translate Bitcoin.org into another language</a> using <a href="https://www.transifex.com/projects/p/bitcoinorg/">Transifex</a> or
+help review new and updated translations. <strong>Translation coordinator
+needed</strong> to answer translator questions and help process
+reviews---email <a href="mailto:dave@dtrt.org">dave@dtrt.org</a> for details.</p></li>
+<li><p>Add Bitcoin events to the <a href="https://bitcoin.org/en/events">events page</a> either by <a href="https://github.com/bitcoin-dot-org/bitcoin.org/edit/master/_events.yml">editing <code>_events.yml</code></a>
+according to the <a href="#events">event instructions</a> or by filling in a <a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new?title=New%20event&amp;body=%20%20%20%20-%20date%3A%20YYYY-MM-DD%0A%20%20%20%20%20%20title%3A%20%22%22%0A%20%20%20%20%20%20venue%3A%20%22%22%0A%20%20%20%20%20%20address%3A%20%22%22%0A%20%20%20%20%20%20city%3A%20%22%22%0A%20%20%20%20%20%20country%3A%20%22%22%0A%20%20%20%20%20%20link%3A%20%22%22">pre-made
+events issue</a>.</p></li>
+<li><p>Help improve Bitcoin.org using your unique skills. We can always use
+the help of writers, editors, graphic artists, web designers, and anyone
+else to enhance Bitcoin.org's <a href="https://bitcoin.org/">current content</a> or to add new
+content. See the <strong>list of <a href="https://github.com/bitcoin-dot-org/bitcoin.org/wiki/Starter-Projects">recommended starter projects</a></strong> or email
+volunteer coordinator Dave Harding <a href="mailto:dave@dtrt.org">dave@dtrt.org</a> to start a
+conversation about how you can help Bitcoin.org.</p></li>
+</ul>
+
+<p>You can always report problems or help improve bitcoin.org by opening a <a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new">new issue</a> or <a href="#working-with-github">pull request</a> on <a href="https://github.com/bitcoin-dot-org/bitcoin.org">GitHub</a>.</p>
+
+<h3>
+<a id="working-with-github" class="anchor" href="#working-with-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working With GitHub</h3>
+
+<p>GitHub allows you to make changes to a project using git, and later submit them in a "pull request" so they can be reviewed and discussed. Many online how-tos exist so you can learn git, <a href="https://www.atlassian.com/git/tutorial/git-basics">here's a good one</a>.</p>
+
+<p>In order to use GitHub, you need to <a href="http://github.com/signup">sign up</a> and <a href="https://help.github.com/articles/set-up-git">set up git</a>. You will also need to click the <strong>Fork</strong> button on the bitcoin.org <a href="https://github.com/bitcoin-dot-org/bitcoin.org">GitHub page</a> and clone your GitHub repository into a local directory with the following command lines:</p>
+
+<pre><code>git clone (url provided by GitHub on your fork's page) bitcoin.org
+cd bitcoin.org
+git remote add upstream https://github.com/bitcoin-dot-org/bitcoin.org.git
+</code></pre>
+
+<p><strong>How to send a pull request</strong></p>
+
+<ol>
+<li>Checkout to your master branch. <code>git checkout master</code>
+</li>
+<li>Create a new branch from the master branch. <code>git checkout -b (any name)</code>
+</li>
+<li>Edit files and <a href="#previewing">preview</a> the result.</li>
+<li>Track changes in files. <code>git add -A</code>
+</li>
+<li>Commit your changes. <code>git commit -m '(short description for your change)'</code>
+</li>
+<li>Push your branch on your GitHub repository. <code>git push origin (name of your branch)</code>
+</li>
+<li>Click on your branch on GitHub and click the <strong>Compare / pull request</strong> button to send a pull request.</li>
+</ol>
+
+<p>When submitting a pull request, please take required time to discuss your changes and adapt your work. It is generally a good practice to split unrelated changes into separate branches and pull requests.</p>
+
+<p><strong>Travis Continuous Integration (CI)</strong></p>
+
+<p>Shortly after your Pull Request (PR) is submitted, a Travis CI job will
+be added to <a href="https://travis-ci.org/bitcoin-dot-org/bitcoin.org">our queue</a>. This
+will build the site and run some basic checks. If the job fails, you
+will be emailed a link to the build log and the PR will indicate a
+failed job. Read the build report and try to correct the problem---but
+if you feel confused or frustrated, please ask for help on the PR (we're
+always happy to help).</p>
+
+<p>If you don't want a particular commit to be tested, add <code>[ci skip]</code>
+anywhere in its commit message.</p>
+
+<p>If you'd like to setup Travis on your own repository so you can test
+builds before opening a pull request, it's really simple:</p>
+
+<ol>
+<li><p>Make sure the master branch of your repository is up to date with the
+bitcoin-dot-org/bitcoin.org master branch.</p></li>
+<li><p>Open <a href="http://docs.travis-ci.com/user/getting-started/">this guide</a>
+and perform steps one, two, and four. (The other steps are already
+done in our master branch.)</p></li>
+<li><p>After you push a branch to your repository, go to your branches page
+(e.g. for user harding, github.com/harding/bitcoin.org/branches). A
+yellow circle, green checkmark, or red X will appear near the branch
+name when the build finishes, and clicking on the icon will take you
+to the corresponding build report.</p></li>
+</ol>
+
+<p><strong>How to make additional changes in a pull request</strong></p>
+
+<p>You simply need to push additional commits on the appropriate branch of your GitHub repository. That's basically the same steps as above, except you don't need to re-create the branch and the pull request.</p>
+
+<p><strong>How to reset and update your master branch with latest upstream changes</strong></p>
+
+<ol>
+<li>Fetch upstream changes. <code>git fetch upstream</code>
+</li>
+<li>Checkout to your master branch. <code>git checkout master</code>
+</li>
+<li>Replace your master branch by the upstream master branch. <code>git reset --hard upstream/master</code>
+</li>
+<li>Replace your master branch on GitHub. <code>git push origin master -f</code>
+</li>
+</ol>
+
+<p><strong>Advanced GitHub Workflow</strong></p>
+
+<p>If you continue to contribute to Bitcoin.org beyond a single pull
+request, you may want to use a more <a href="https://gist.github.com/harding/1a99b0bad37f9498709f">advanced GitHub
+workflow</a>.</p>
+
+<h3>
+<a id="previewing" class="anchor" href="#previewing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Previewing</h3>
+
+<h4>
+<a id="preview-small-text-changes" class="anchor" href="#preview-small-text-changes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Preview Small Text Changes</h4>
+
+<p>Simple text changes can be previewed live on bitcoin.org. You only need to click anywhere on the page and hold your mouse button for one second. You'll then be able to edit the page just like a document. Changes will be lost as soon as the page is refreshed.</p>
+
+<h4>
+<a id="build-the-site-locally" class="anchor" href="#build-the-site-locally" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build The Site Locally</h4>
+
+<p>For anything more than simple text previews, you will need to build the
+site. If you can't do this yourself using the instructions below, please
+<a href="#working-with-github">open a pull request</a> with your suggested change and one
+of the site developers will create a preview for you.</p>
+
+<p>To build the site, you need to go through a one-time installation
+procedure that takes 15 to 30 minutes.  After that you can build the
+site an unlimited number of times with no extra work.</p>
+
+<h5>
+<a id="install-the-dependencies" class="anchor" href="#install-the-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install The Dependencies</h5>
+
+<p>Before building the site, you need to install the following
+dependencies and tools, which are pretty easy on any modern Linux:</p>
+
+<p><strong>Install binary libraries and tools</strong></p>
+
+<p>On recent versions of Ubuntu and Debian, you can run the following
+command to ensure you have the required libraries, headers, and tools:</p>
+
+<pre><code>sudo apt-get install build-essential git libicu-dev zlib1g-dev
+</code></pre>
+
+<p><strong>Install RVM</strong></p>
+
+<p>Install RVM using either the <a href="https://rvm.io/">easy instructions</a> or the
+<a href="https://rvm.io/rvm/security">more secure instructions</a>.</p>
+
+<p>Read the instructions printed to your console during setup to enable the
+<code>rvm</code> command in your shell.  After installation, you need to run the
+following command:</p>
+
+<pre><code>source ~/.rvm/scripts/rvm
+</code></pre>
+
+<p><strong>Install Ruby 2.0.0</strong></p>
+
+<p>To install Ruby 2.0.0, simply run this command:</p>
+
+<pre><code>rvm install ruby-2.0.0
+</code></pre>
+
+<p>Sometimes this will find a pre-compiled Ruby package for your Linux
+distribution, but sometimes it will need to compile Ruby from scratch
+(which takes about 15 minutes).</p>
+
+<p>After Ruby 2.0.0 is installed, make it your default Ruby:</p>
+
+<pre><code>rvm alias create default ruby-2.0.0
+</code></pre>
+
+<p>And tell your system to use it:</p>
+
+<pre><code>rvm use default
+</code></pre>
+
+<p>(Note: you can use a different default Ruby, but if you ever change
+your default Ruby, you must re-run the <code>gem install bundle</code> command
+described below before you can build the site. If you ever receive a
+"eval: bundle: not found" error, you failed to re-run <code>gem install
+bundle</code>.)</p>
+
+<p><strong>Install Bundle</strong></p>
+
+<p>When you used RVM to install Ruby, it also installed the <code>gem</code> program.
+Use that program to install bundle:</p>
+
+<pre><code>gem install bundle
+</code></pre>
+
+<p><strong>Install the Ruby dependencies</strong></p>
+
+<p>Ensure you checked out the site repository as described in <a href="#working-with-github">Working with
+GitHub</a>. Then change directory to the top-level of
+your local repository (replace <code>bitcoin.org</code> with the full path to your local
+repository clone):</p>
+
+<pre><code>cd bitcoin.org
+</code></pre>
+
+<p>And install the necessary dependencies using Bundle:</p>
+
+<pre><code>bundle install
+</code></pre>
+
+<p>Note that some of the dependencies (particularly nokogiri) can take a
+long time to install on some systems, so be patient.</p>
+
+<p>Once Bundle completes successfully, you can preview or build the site.</p>
+
+<h5>
+<a id="preview-the-site" class="anchor" href="#preview-the-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Preview The Site</h5>
+
+<p>To preview the website in your local browser, make sure you're in the
+<code>bitcoin.org</code> directory and run the following command:</p>
+
+<pre><code>make preview
+</code></pre>
+
+<p>This will compile the site (takes 5 to 10 minutes; see the <a href="#fast-partial-previews-or-builds">speed up
+instructions</a>) and then print the a message like this:</p>
+
+<pre><code>Server address: http://0.0.0.0:4000
+Server running... press ctrl-c to stop.
+</code></pre>
+
+<p>Visit the indicated URL in your browser to view the site.</p>
+
+<h5>
+<a id="build-the-site" class="anchor" href="#build-the-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build The Site</h5>
+
+<p>To build the site exactly like we do for the deployment server, make
+sure you're in the <code>bitcoin.org</code> directory and run:</p>
+
+<pre><code>make
+</code></pre>
+
+<p>The resulting HTML for the entire site will be placed in the <code>_site</code>
+directory.  The following alternative options are available:</p>
+
+<pre><code>## After you build the site, you can run all of the tests (may take awhile)
+make test
+
+## Or you can build the site and run some quick tests with one command:
+make valid
+
+## Or build the site and run all tests
+make all
+</code></pre>
+
+<h4>
+<a id="fast-partial-previews-or-builds" class="anchor" href="#fast-partial-previews-or-builds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fast Partial Previews Or Builds</h4>
+
+<p>In order to preview some changes faster, you can disable all plugins and
+languages except those you need by prefixing the <code>ENABLED_LANGS</code> and
+<code>ENABLED_PLUGINS</code> environment variables to your command line.  For
+example, do this to disable everything:</p>
+
+<pre><code>## Fast preview, takes less than 30 seconds
+ENABLED_PLUGINS="" ENABLED_LANGS="" make preview
+
+## Fast build and tests, takes less than 50 seconds
+## Some tests may fail in fast mode; use -i to continue despite them
+ENABLED_PLUGINS="" ENABLED_LANGS="" make -i valid
+</code></pre>
+
+<p>Then to enable some plugins or languages, you can add them back in.
+For example:</p>
+
+<pre><code>## Slower (but still pretty fast) build and test
+ENABLED_PLUGINS="events autocrossref" ENABLED_LANGS="en fr" make -i valid
+</code></pre>
+
+<p>Plugins include:</p>
+
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Seconds</th>
+<th>Remote APIs</th>
+<th>Used For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alerts</td>
+<td>5</td>
+<td>--</td>
+<td>Network alert pages</td>
+</tr>
+<tr>
+<td>autocrossref</td>
+<td>90</td>
+<td>--</td>
+<td>Developer documentation</td>
+</tr>
+<tr>
+<td>contributors</td>
+<td>5</td>
+<td>GitHub.com</td>
+<td>Contributor listings</td>
+</tr>
+<tr>
+<td>events</td>
+<td>5</td>
+<td>Meetup.com; Google Maps</td>
+<td>Events page</td>
+</tr>
+<tr>
+<td>glossary</td>
+<td>30</td>
+<td>--</td>
+<td>Developer glossary</td>
+</tr>
+<tr>
+<td>redirects</td>
+<td>20</td>
+<td>--</td>
+<td>Redirects from old URLs</td>
+</tr>
+<tr>
+<td>releases</td>
+<td>10</td>
+<td>--</td>
+<td>Bitcoin Core release notes; Download page</td>
+</tr>
+<tr>
+<td>sitemap</td>
+<td>10</td>
+<td>--</td>
+<td>/sitemap.xml</td>
+</tr>
+</tbody>
+</table>
+
+<p>Notes: some plugins interact with each other or with translations; for example running
+'autocrossref' and 'glossary' takes longer than running each other
+separately. Also, plugins that use remote APIs may take a long time to
+run if the API site is running slow.</p>
+
+<p>For a list of languages, look in the <code>_translations</code> directory.</p>
+
+<h4>
+<a id="publishing-previews" class="anchor" href="#publishing-previews" aria-hidden="true"><span class="octicon octicon-link"></span></a>Publishing Previews</h4>
+
+<p>You can publish your previews online to any static hosting service.
+<a href="https://pages.github.com/">GitHub pages</a> is a free service available to
+all GitHub users that works with Bitcoin.org's site hierarchy.</p>
+
+<p>Before building a preview site, it is recommended that you set the
+environmental variable <code>BITCOINORG_BUILD_TYPE</code> to "preview".  This will
+enable some content that would otherwise be hidden and also create a
+robots.txt file that will help prevent the site from being indexed by
+search engines and mistaken for the actual Bitcoin.org website.</p>
+
+<p>In the bash shell, you can do this by running the following command line
+before building you preview:</p>
+
+<pre><code>export BITCOINORG_BUILD_TYPE=preview
+</code></pre>
+
+<p>You can also add this line to your <code>~/.bashrc</code> file if you frequently
+build site previews so that you don't have to remember to run it for
+each shell.</p>
+
+<h2>
+<a id="developer-documentation" class="anchor" href="#developer-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developer Documentation</h2>
+
+<p>Most parts of the documentation can be found in the <a href="https://github.com/bitcoin-dot-org/bitcoin.org/tree/master/_includes">_includes</a>
+directory. Updates, fixes and improvements are welcome and can submitted using <a href="#working-with-github">pull requests</a> on GitHub.</p>
+
+<p><strong>Mailing List</strong>: General discussions can take place on the
+<a href="https://groups.google.com/forum/#!forum/bitcoin-documentation">mailing list</a>.</p>
+
+<p><strong>TODO List</strong>: New content and suggestions for improvements can be submitted
+to the <a href="https://github.com/bitcoin-dot-org/bitcoin.org/wiki/Documentation-TODO">TODO list</a>.
+You are also welcome if you want to assign yourself to any task.</p>
+
+<p><strong>Style Guide</strong>: For better consistency, the <a href="https://github.com/bitcoin-dot-org/bitcoin.org/wiki/Documentation-Style-Guide">style guide</a>
+can be used as a reference for terminology, style and formatting. Suggested changes
+can also be submitted to this guide to keep it up to date.</p>
+
+<p><strong>Cross-Reference Links</strong>: Cross-reference links can be defined in
+_includes/references.md. Terms which should automatically link to these
+references are defined in _autocrossref.yaml .</p>
+
+<h3>
+<a id="new-glossary-entries" class="anchor" href="#new-glossary-entries" aria-hidden="true"><span class="octicon octicon-link"></span></a>New Glossary Entries</h3>
+
+<p>Add new English glossary entries in the <code>_data/glossary/en/</code> directory.
+Copy a previous glossary entry to get the correct YAML variables
+(suggest using block.yaml as a template).</p>
+
+<p>Non-English glossary entries are not currently supported.  You'll have
+to update the glossary.rb plugin and templates to support them.</p>
+
+<h3>
+<a id="new-developer-search-terms" class="anchor" href="#new-developer-search-terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>New Developer Search terms</h3>
+
+<p>You can add new search terms or categories directly to the <code>devsearches</code>
+array in <code>_config.yaml</code>.  Comments in that file should provide full
+documentation.</p>
+
+<h2>
+<a id="translation" class="anchor" href="#translation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translation</h2>
+
+<h3>
+<a id="how-to-translate" class="anchor" href="#how-to-translate" aria-hidden="true"><span class="octicon octicon-link"></span></a>How To Translate</h3>
+
+<p>You can join a translation team on <a href="https://www.transifex.com/projects/p/bitcoinorg/">Transifex</a> and start translating or improving existing translations.</p>
+
+<ul>
+<li>You must be a native speaker for the language you choose to translate.</li>
+<li>Please be careful to preserve the original meaning of each text.</li>
+<li>Sentences and popular expressions should sound native in your language.</li>
+<li>You can check the result on the <a href="http://bitcointx.us.to/">live preview</a> and <a href="#preview-small-text-changes">test small changes</a>.</li>
+<li>Translations need to be reviewed by a reviewer or coordinator before publication.</li>
+<li>Once reviewed, translations can be <a href="#import-translations">submitted</a> in a pull request on GitHub.</li>
+<li><strong>In doubt, please contact coordinators on Transifex. That'll be much appreciated.</strong></li>
+</ul>
+
+<h3>
+<a id="import-translations" class="anchor" href="#import-translations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import Translations</h3>
+
+<p><strong>Update translations</strong>: You can update the relevant language file in _translations/ and from the root of the git repository run ./_contrib/updatetx.rb to update layouts and templates for this language. You should also make sure that no url has been changed by translators. If any page needs to be moved, please add <a href="#redirections">redirections</a>.</p>
+
+<p><strong>Add a new language</strong>: You can put the language file from Transifex in _translations and add the language in _config.yml in the right display order for the language bar. Make sure to review all pages and check all links.</p>
+
+<h3>
+<a id="update-english-strings" class="anchor" href="#update-english-strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update English Strings</h3>
+
+<p>Any change in the English text can be done through a pull request on GitHub. If your changes affect the HTML layout of a page, you should apply fallback HTML code for other languages until they are updated.</p>
+
+<pre><code>{% case page.lang %}
+{% when 'fr' %}
+  (outdated french content)
+{% else %}
+  (up to date english content)
+{% endcase %}
+</code></pre>
+
+<p><strong>When translation is needed</strong>: If you want all changes you've made to be re-translated, you can simply update the resource file (en.yml) on Transifex.</p>
+
+<p><strong>When translation is not needed</strong>: If you are only pushing typo fixes and that you don't want translators to redo all their work again, you can use the Transifex client to pull translations, update en.yml and push back all translations at once:</p>
+
+<pre><code>tx init
+tx set --auto-remote https://www.transifex.com/projects/p/bitcoinorg/
+tx pull -a -s --skip
+tx set --source -r bitcoinorg.bitcoinorg -l en translations/bitcoinorg.bitcoinorg/en.yml
+(update en.yml)
+tx push -s -t -f --skip --no-interactive
+</code></pre>
+
+<h2>
+<a id="posts" class="anchor" href="#posts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Posts</h2>
+
+<h3>
+<a id="events" class="anchor" href="#events" aria-hidden="true"><span class="octicon octicon-link"></span></a>Events</h3>
+
+<p>If you're not comfortable with GitHub pull requests, please submit an
+event using the button near the bottom of the <a href="https://bitcoin.org/en/events">Events
+page</a>.</p>
+
+<p>To create an event pull request, place the event in <code>_events.yml</code> and adhere to this format:</p>
+
+<pre><code>- date: 2014-02-21
+  title: "2014 Texas Bitcoin Conference"
+  venue: "Circuit of the Americas™ - Technology and Conference Center"
+  address: "9201 Circuit of the Americas Blvd"
+  city: "Austin, TX"
+  country: "United States"
+  link: "http://texasbitcoinconference.com/"
+</code></pre>
+
+<p>Events that have a <a href="http://www.meetup.com/">Meetup.com</a> page with a
+publicly-viewable address and "Bitcoin" in the event title should
+already be displayed on the <a href="https://bitcoin.org/en/events">events page</a>. (Please open a <a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new">new
+issue</a> if a Bitcoin meetup event isn't displayed.)</p>
+
+<h3>
+<a id="release-notes" class="anchor" href="#release-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release Notes</h3>
+
+<p>To create a new Bitcoin Core release, create a new file in the
+<code>_releases/</code> directory. Any file name ending in <code>.md</code> is fine, but we
+recommend naming it after the release, such as <code>0.10.0.md</code></p>
+
+<p>Then copy in the following YAML header (the part between the three dashes, ---):</p>
+
+<pre><code>---
+# This file is licensed under the MIT License (MIT) available on
+# http://opensource.org/licenses/MIT.
+
+## Required value below populates the %v variable (note: % needs to be escaped in YAML if it starts a value)
+required_version: 0.10.0
+## Optional release date.  May be filled in hours/days after a release
+optional_date: 2015-02-16
+## Optional title.  If not set, default is: Bitcoin Core version %v released
+optional_title: Bitcoin Core version %v released
+## Optional magnet link.  To get it, open the torrent in a good BitTorrent client
+## and View Details, or install the transmission-cli Debian/Ubuntu package
+## and run: transmission-show -m &lt;torrent file&gt;
+#
+## Link should be enclosed in quotes and start with: "magnet:?
+optional_magnetlink:
+
+## The --- below ends the YAML header. After that, paste the release notes.
+## Warning: this site's Markdown parser commonly requires you make two
+## changes to the release notes from the Bitcoin Core source tree:
+##
+## 1. Make sure both ordered and unordered lists are preceded by an empty
+## (whitespace only) line, like the empty line before this list item.
+##
+## 2. Place URLs inside angle brackets, like &lt;http://bitcoin.org/bin&gt;
+
+---
+</code></pre>
+
+<p>Then start at the top of the YAML header and read the comments, filling
+in and replacing information as necessary, and then reformatting the
+release notes (if necessary) as described by the last lines of the YAML
+header.</p>
+
+<p>Download links will automatically be set to the defaults using the current
+release version number, but if you need to change any download URL, edit
+the file <code>_templates/download.html</code></p>
+
+<p>You can then create a pull request to the
+master branch and Travis CI will automatically build it and make sure
+the links you provided return a "200 OK" HTTP header. (The actual files
+will not be downloaded to save bandwidth.) Alternatively, you can build
+the site locally with <code>make all</code> to run the same quality assurance tests.</p>
+
+<p>The file can be edited later to add any optional information (such as a
+release date) that you didn't have when you created the file.</p>
+
+<h4>
+<a id="preparing-a-release-in-advance" class="anchor" href="#preparing-a-release-in-advance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Preparing a release in advance</h4>
+
+<p>It's nice to prepare a release pull request in advance so that the
+Bitcoin Core developers can just click "Merge Pull Request" when the new
+version is released.  Here's the recommended recipe, where <code>&lt;VERSION&gt;</code>
+is the particular version:</p>
+
+<ol>
+<li><p>Create a new branch named <code>bitcoin-core-&lt;VERSION&gt;</code>.  You can either
+do this locally or in GitHub's web GUI.</p></li>
+<li><p>Follow the instructions in the [Release Notes][] section to create a
+new release.  You should leave the <code>optional_date</code> blank unless you
+happen to know the date of the planned release.</p></li>
+<li><p>Push the branch to the <a href="https://github.com/bitcoin-dot-org/bitcoin.org">https://github.com/bitcoin-dot-org/bitcoin.org</a>
+repository so any contributor can edit it. <strong>Don't</strong> open a pull
+request yet.</p></li>
+<li><p>Travis CI will build the site from the branch and then run the tests.
+The tests will fail because they expect the release binaries to be
+present and you're preparing this release request in advance of them
+being uploaded.</p></li>
+<li>
+<p>Open the failed Travis CI log.  At the end, it will say something like:</p>
+
+<pre><code>ERROR:
+Error: Could not retrieve /bin/bitcoin-core-0.10.1/bitcoin-0.10.1-win64-setup.exe
+Error: Could not retrieve /bin/bitcoin-core-0.10.1/bitcoin-0.10.1-win32-setup.exe
+[...]
+</code></pre>
+</li>
+<li>
+<p>Copy the errors from above into a text file and remove everything
+except for the URLs so that what's left are lines that look like:</p>
+
+<pre><code>/bin/bitcoin-core-0.10.1/bitcoin-0.10.1-win64-setup.exe
+/bin/bitcoin-core-0.10.1/bitcoin-0.10.1-win32-setup.exe
+[...]
+</code></pre>
+</li>
+<li><p>Optional, but nice: sort the lines into alphabetical order.</p></li>
+<li>
+<p>Now open a pull request from the <code>bitcoin-core-&lt;VERSION&gt;</code> branch to
+the <code>master</code> branch. We recommend that you use this title: "Releases:
+Add Bitcoin Core &lt;VERSION&gt;".</p>
+
+<p>We recommend that you use the following text with any changes you
+think are appropriate. <strong>Note:</strong> read all the way to the end of this
+enumerated point before submitting your pull request.</p>
+
+<pre><code>This updates the download links to point to &lt;VERSION&gt; and adds the
+&lt;VERSION&gt; release notes to the site. I'll keep it updated throughout
+the RC cycle, but it can be merged by anyone with commit access
+once &lt;VERSION&gt; final is released (see TODO lists below).
+
+CC: @laanwj
+
+Essential TODO:
+
+* [ ] Make sure the download links work. This is automatically checked as part of the Travis CI build, so trigger a rebuild and, if it passes, this should be safe to merge.
+
+Optional TODO (may be done in commits after merge):
+
+* [ ] Add the actual release date to the YAML header in `_releases/0.10.1.md`
+* [ ] Add the magnet URI to the YAML header in `_releases/0.10.1.md` (brief instructions for creating the link are provided as comments in that file)
+
+Expected URLs for the Bitcoin Core binaries:
+</code></pre>
+
+<p>Underneath the line 'Expected URLs', paste the URLs you retrieved
+from Travis CI earlier.</p>
+
+<p>Note that <a href="https://github.com/laanwj" class="user-mention">@laanwj</a> is Wladimir J. van der Laan, who is usually
+responsible for uploading the Bitcoin Core binaries.  If someone
+else is responsible for this release, CC them instead.  If you don't
+know who is responsible, ask in #bitcoin-dev on Freenode.</p>
+</li>
+<li><p>After creating the pull request, use the Labels menu to assign it the
+"Releases" label. This is important because it's what the Bitcoin
+Core release manager will be looking for.</p></li>
+<li><p>After each new Release Candidate (RC) is released, update the
+release notes you created in the <code>_releases</code> directory. (But don't
+worry about this too much; we can always upload updated release
+notes after the release.)</p></li>
+</ol>
+
+<h3>
+<a id="alerts" class="anchor" href="#alerts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alerts</h3>
+
+<ol>
+<li><a href="#who-to-contact">Who to contact</a></li>
+<li>
+<a href="#basic-alert">Basic alert</a> (emergency fast instructions)</li>
+<li><a href="#detailed-alert">Detailed alert</a></li>
+<li><a href="#clearing-an-alert">Clearing an alert</a></li>
+</ol>
+
+<h4>
+<a id="who-to-contact" class="anchor" href="#who-to-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who to Contact</h4>
+
+<p>The following people can publish alerts on Bitcoin.org.  Their email
+addresses are on the linked GitHub profiles.</p>
+
+<ul>
+<li>Saïvann Carignan, <a href="https://github.com/saivann">@saivann</a>, saivann on Freenode</li>
+<li>Dave Harding, <a href="https://github.com/harding">@harding</a>, harding on Freenode</li>
+<li>Wladimir van der Laan, <a href="https://github.com/laanwj">@laanwj</a>, wumpus on Freenode</li>
+<li>Theymos, <a href="https://github.com/theymos">@theymos</a>, theymos on Freenode</li>
+</ul>
+
+<p>Several of the above are only occasionally on Freenode.  Alert
+coordination is usually conducted in #bitcoin-dev on Freenode.</p>
+
+<h4>
+<a id="basic-alert" class="anchor" href="#basic-alert" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Alert</h4>
+
+<ol>
+<li><p>Open your editor on a file named <code>_alerts/YYYY-MM-DD-short-title.md</code>
+(the alert will appear as <a href="https://bitcoin.org/en/alert/YYYY-MM-DD-short-title">https://bitcoin.org/en/alert/YYYY-MM-DD-short-title</a>).</p></li>
+<li>
+<p>Paste the following text into the top of the file:</p>
+
+<pre><code>---
+## Title displayed on alert page
+title: "11/12 March 2013 Chain Fork"
+## Short URL for use in P2P network alerts: https://bitcoin.org/&lt;shorturl&gt;
+shorturl: "chainfork"
+## Active alerts will display the banner (below) on all bitcoin.org content pages
+active: true
+## Banner displayed if 'active: true'.  Can use HTML formatting
+banner: "&lt;b&gt;Chain fork&lt;/b&gt; - Please stop mining on bitcoin version 0.8.0. Click here for more information."
+---
+
+{% comment %}
+First paragraph should indicate whose bitcoins are safe, to avoid
+starting a panic.
+{% comment %}
+
+Your bitcoins are safe if you received them in transactions
+confirmed before 2015-07-06 00:00 UTC.
+
+{% comment %}
+Second paragraph should summarize the problem, and subsequent
+text should indicate what people should do immediately.
+Consider: users (by wallet type), merchants, and miners.
+{% comment %}
+
+However, there has been a problem with a planned upgrade. For
+bitcoins received later than the time above, confirmation scores are
+significantly less reliable then they usually are for users of
+certain software:
+
+- Lightweight (SPV) wallet users should wait an additional 30
+  confirmations more than you would normally wait. Electrum users,
+  please see this note.
+</code></pre>
+</li>
+</ol>
+
+<ul>
+<li><p>Edit the file.  It is written in <a href="https://help.github.com/articles/markdown-basics/">Markdown format</a>.</p></li>
+<li>
+<p>Commit it.</p>
+
+<ul>
+<li>
+<strong>Note:</strong> the commit must be signed by one of the people in the
+<a href="#who-to-contact">Who to Contact</a> section for site
+auto-building to work.</li>
+</ul>
+</li>
+<li>
+<p>Push the commit to the master branch. Rebuilding the site occurs
+automatically and takes 7 to 15 minutes.</p>
+
+<ul>
+<li>
+<strong>Note:</strong> do not push additional commits until the alert is
+displayed on the live site.  The site build aborts and starts over
+when new commits are found.</li>
+</ul>
+</li>
+<li><p>Give the <code>shorturl</code> URL (<code>bitcoin.org/&lt;shorturl&gt;</code>) to the P2P alert message
+key holders to use in any alert messages they send.</p></li>
+<li><p>Proceed to the next section to improve the alert.</p></li>
+</ul>
+
+<h4>
+<a id="detailed-alert" class="anchor" href="#detailed-alert" aria-hidden="true"><span class="octicon octicon-link"></span></a>Detailed Alert</h4>
+
+<p>In addition to providing more information about how users should respond
+to the situation, you can enhance the alert in several ways described
+below.</p>
+
+<p>The following fields may be defined in the the alert YAML header:</p>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s">-<span class="pl-s">--</span></span>
+<span class="pl-c">## (Required; HTML text) Title displayed on alert page</span>
+<span class="pl-s"><span class="pl-ent">title:</span> <span class="pl-s"><span class="pl-pds">"</span>11/12 March 2013 Chain Fork<span class="pl-pds">"</span></span></span>
+<span class="pl-c">## (Optional; display ASCII only) Short URL for use in P2P network alerts: https://bitcoin.org/&lt;shorturl&gt;</span>
+<span class="pl-s"><span class="pl-ent">shorturl:</span> <span class="pl-s"><span class="pl-pds">"</span>chainfork<span class="pl-pds">"</span></span></span>
+<span class="pl-c">## (Optional; default=false) Active alerts will display the banner (below) on all bitcoin.org content pages</span>
+<span class="pl-s"><span class="pl-ent">active:</span> <span class="pl-s">true</span></span>
+<span class="pl-c">## (Optional; HTML text) Banner displayed if 'active: true'.  Can use HTML formatting</span>
+<span class="pl-s"><span class="pl-ent">banner:</span> <span class="pl-s"><span class="pl-pds">"</span>&lt;b&gt;Chain fork&lt;/b&gt; - Please stop mining on bitcoin version 0.8.0. Click here for more information.<span class="pl-pds">"</span></span></span>
+<span class="pl-c">## (Optional; default=alert) CSS class to set banner color</span>
+<span class="pl-c">##   alert = red  |  warning = orange  |  success = green  | info = blue</span>
+<span class="pl-s"><span class="pl-ent">bannerclass:</span> <span class="pl-s">alert</span></span>
+<span class="pl-s">-<span class="pl-s">--</span></span></pre></div>
+
+<p>The time of the last update should be placed on the page somewhere. UTC
+should be used for all dates, and RFC 2822 format ( date -uR ) is
+recommended for long dates. For example, place the date in the footer of
+the document:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>text-align:right<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">i</span>&gt;This notice last updated: Thu, 16 May 2013 01:37:00 UTC&lt;/<span class="pl-ent">i</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>You may also want to create a page on the Wiki to allow anyone to
+provide additional information.  If you do so, link to it from the
+alert.</p>
+
+<h4>
+<a id="clearing-an-alert" class="anchor" href="#clearing-an-alert" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clearing An Alert</h4>
+
+<p>To stop advertising an alert on every Bitcoin.org page, change the YAML
+header field <code>active</code> to <em>false</em>:</p>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-c">## (Optional; default=false) Active alerts will display the banner (below) on all bitcoin.org content pages</span>
+<span class="pl-s"><span class="pl-ent">active:</span> <span class="pl-s">false</span></span></pre></div>
+
+<p>Alternatively, for a few days you can change the message and set the
+CSS <code>bannerclass</code> to <em>success</em> to indicate the problem has been resolved.</p>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-c">## (Optional; HTML text) Banner displayed if 'active: true'.  Can use HTML formatting</span>
+<span class="pl-s"><span class="pl-ent">banner:</span> <span class="pl-s"><span class="pl-pds">"</span>&lt;b&gt;Chain fork&lt;/b&gt; - situation resolved<span class="pl-pds">"</span></span></span>
+<span class="pl-c">## (Optional; default=alert) CSS class to set banner color</span>
+<span class="pl-c">##   alert = red  |  warning = orange  |  success = green  | info = blue</span>
+<span class="pl-s"><span class="pl-ent">bannerclass:</span> <span class="pl-s">success</span></span></pre></div>
+
+<h2>
+<a id="wallets" class="anchor" href="#wallets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wallets</h2>
+
+<p>The wallet list is based on the personal evaluation of the maintainer(s) and regular contributors of this site, according to the criteria detailed below.</p>
+
+<p>These requirements are meant to be updated and strengthened over time. Innovative wallets are exciting and encouraged, so if your wallet has a good reason for not following some of the rules below, please submit it anyway and we'll consider updating the rules.</p>
+
+<p>Basic requirements:</p>
+
+<ul>
+<li>Sufficient users and/or developers feedback can be found without concerning issues, or independent security audit(s) is available</li>
+<li>No indication that users have been harmed considerably by any issue in relation to the wallet</li>
+<li>No indication that security issues have been concealed, ignored, or not addressed correctly in order to prevent new or similar issues from happening in the future</li>
+<li>No indication that the wallet uses unstable or unsecure libraries</li>
+<li>No indication that changes to the code are not properly tested</li>
+<li>Wallet was publicly announced and released since at least 3 months</li>
+<li>No concerning bug is found when testing the wallet</li>
+<li>Website supports HTTPS and 301 redirects HTTP requests</li>
+<li>SSL certificate passes <a href="https://www.ssllabs.com/ssltest/">Qualys SSL Labs SSL test</a>
+</li>
+<li>Website serving executable code or requiring authentication uses HSTS with a max-age of at least 180 days</li>
+<li>The identity of CEOs and/or developers is public</li>
+<li>Avoid address reuse by using a new change address for each transaction</li>
+<li>If private keys or encryption keys are stored online:
+
+<ul>
+<li>Refuses weak passwords (short passwords and/or common passwords) used to secure access to any funds, or provides an aggressive account lock-out feature in response to failed login attempts along with a strict account recovery process.</li>
+</ul>
+</li>
+<li>If user has no access over its private keys:
+
+<ul>
+<li>Provides 2FA authentication feature</li>
+<li>Reminds the user to enable 2FA by email or in the main UI of the wallet</li>
+<li>User session is not persistent, or requires authentication for spending</li>
+<li>Provides account recovery feature</li>
+</ul>
+</li>
+<li>If user has exclusive access over its private keys:
+
+<ul>
+<li>Allows backup of the wallet</li>
+<li>Restoring wallet from backup is working</li>
+<li>Source code is public and kept up to date under version control system</li>
+</ul>
+</li>
+<li>If user has no access to some of the private keys in a multi-signature wallet:
+
+<ul>
+<li>Provides 2FA authentication feature</li>
+<li>Reminds the user to enable 2FA by email or in the main UI of the wallet</li>
+<li>User session is not persistent, or requires authentication for spending</li>
+<li>Gives control to the user over moving their funds out of the multi-signature wallet</li>
+</ul>
+</li>
+<li>For hardware wallets:
+
+<ul>
+<li>Uses the push model (computer malware cannot sign a transaction without user input)</li>
+<li>Protects the seed against unsigned firmware upgrades</li>
+<li>Supports importing custom seeds</li>
+<li>Provides source code and/or detailed specification for blackbox testing if using a closed-source Secure Element</li>
+</ul>
+</li>
+</ul>
+
+<p>Optional criteria (some could become requirements):</p>
+
+<ul>
+<li>Received independent security audit(s)</li>
+<li>Avoid address reuse by displaying a new receiving address for each transaction in the wallet UI</li>
+<li>Does not show "received from" Bitcoin addresses in the UI</li>
+<li>Uses deterministic ECDSA nonces (RFC 6979)</li>
+<li>Provides a bug reporting policy on the website</li>
+<li>If user has no access over its private keys:
+
+<ul>
+<li>Full reserve audit(s)</li>
+<li>Insurance(s) against failures on their side</li>
+<li>Reminds the user to enable 2FA in the main UI of the wallet</li>
+</ul>
+</li>
+<li>If user has exclusive access over its private keys:
+
+<ul>
+<li>Supports HD wallets (BIP32)</li>
+<li>Provides users with step to print or write their wallet seed on setup</li>
+<li>Uses a strong KDF and key stretching for wallet storage and backups</li>
+<li>On desktop platform:
+
+<ul>
+<li>Encrypt the wallet by default</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For hardware wallets:
+
+<ul>
+<li>Prevents downgrading the firmware</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="adding-a-wallet" class="anchor" href="#adding-a-wallet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding a wallet</h3>
+
+<p><em>Before adding a wallet,</em> please make sure your wallet meets all of the
+Basic Requirements listed above, or open a <a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues/new">new issue</a> to request an
+exemption or policy change. Feel free to email Dave Harding
+<a href="mailto:dave@dtrt.org">dave@dtrt.org</a> if you have any questions.</p>
+
+<p>Wallets can be added in <code>_templates/choose-your-wallet.html</code>. Entries are ordered by levels and new wallets must be added after the last wallet on the same level.</p>
+
+<ul>
+<li>Level 1 - Full nodes</li>
+<li>Level 2 - SPV, Random servers</li>
+<li>Level 3 - Hybrid, Multisig wallets</li>
+<li>Level 4 - Web wallets</li>
+</ul>
+
+<p><strong>Screenshot</strong>: The png files must go in <code>/img/screenshots</code>, be 250 X 350 px and optimized with <code>optipng -o7 file.png</code>.</p>
+
+<p><strong>Icon</strong>: The png file must go in <code>/img/wallet</code>, be 144 X 144 px and optimized with <code>optipng -o7 file.png</code>. The icon must fit within 96 X 96 px inside the png, or 85 X 85 px for square icons.</p>
+
+<p><strong>Description</strong>: The text must go in <code>_translations/en.yml</code> alongside other wallets' descriptions.</p>
+
+<h3>
+<a id="score" class="anchor" href="#score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Score</h3>
+
+<p>Each wallet is assigned a score for five criteria. For each of them, the appropriate text in <code>_translations/en.yml</code> needs to be chosen.</p>
+
+<p><strong>Control</strong> - What control the user has over his bitcoins?</p>
+
+<p>To get a good score, the wallet must provide the user with full exclusive control over their bitcoins.</p>
+
+<p>To get a passing score, the wallet must provide the user with exclusive control over their bitcoins. Encrypted online backups are accepted so long as only the user can decrypt them. Multisig wallets are accepted so long as only the user can spend without the other party's permission.</p>
+
+<p><strong>Validation</strong> - How secure and « zero trust » is payment processing?</p>
+
+<p>To get a good score, the wallet must be a full node and need no trust on other nodes.</p>
+
+<p>To get a passing score, the wallet must rely on random nodes, either by using the SPV model or a pre-populated list or servers.</p>
+
+<p><strong>Transparency</strong> - How transparent and « zero trust » is the source code?</p>
+
+<p>To get a good score, the wallet must deserve a passing score and be built deterministically.</p>
+
+<p>To get a passing score, the wallet must be open-source, under version control and releases must be clearly identified (e.g. by tags or commits). The codebase and final releases must be public since at least 6 months and previous commits must remain unchanged.</p>
+
+<p><strong>Environment</strong> - How secure is the environment of the wallet?</p>
+
+<p>To get a good score, the wallet must run from an environment where no apps can be installed.</p>
+
+<p>To get a passing score, the wallet must run from an environment that provides app isolation (e.g. Android, iOS), or require two-factor authentication for spending.</p>
+
+<p><strong>Privacy</strong>: Does the wallet protect users' privacy?</p>
+
+<p>To get a good score, the wallet must avoid address reuse by using a new change address for each transaction, avoid disclosing information to peers or central servers and be compatible with Tor.</p>
+
+<p>To get a passing score, the wallet must avoid address reuse by using a new change address for each transaction.</p>
+
+<h2>
+<a id="advanced-usage" class="anchor" href="#advanced-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced Usage</h2>
+
+<h3>
+<a id="redirections" class="anchor" href="#redirections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Redirections</h3>
+
+<p>Redirections can be defined in <code>_config.yml</code>.</p>
+
+<pre><code>  /news: /en/version-history
+</code></pre>
+
+<h3>
+<a id="aliases-for-contributors" class="anchor" href="#aliases-for-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aliases For Contributors</h3>
+
+<p>Aliases for contributors are defined in <code>_config.yml</code>.</p>
+
+<pre><code>aliases:
+  s_nakamoto: Satoshi Nakamoto
+  --author=Satoshi Nakamoto: Satoshi Nakamoto
+  gavinandresen: Gavin Andresen
+</code></pre>
+
+<h3>
+<a id="blog-posts" class="anchor" href="#blog-posts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blog Posts</h3>
+
+<p>Posts for the [Bitcoin.org Site Blog][] should be added to the <code>_posts</code>
+directory with the naming convention:
+<code>YEAR-MONTH-DAY-ARBITRARY_FILE_NAME</code> (with year, month, and day as
+two-digit numbers).  The YAML front matter should be similar to this:</p>
+
+<pre><code>---
+type: posts
+layout: post
+lang: en
+category: blog
+
+title: "Quarterly Report March 2015"
+permalink: /en/posts/quarterly-report-march-2015.html
+date: 2015-03-05
+author: &gt;
+  David A. Harding (&lt;a href="mailto:dave@dtrt.org"&gt;email&lt;/a&gt;, &lt;a
+  href="https://github.com/harding"&gt;GitHub&lt;/a&gt;,
+  &lt;a href="http://www.reddit.com/user/harda/"&gt;Reddit&lt;/a&gt;)
+---
+</code></pre>
+
+<p>The type, layout, and category should always be as specified above. The
+other parameters should be set to values specific to that post, but the
+permalink must end in '.html'.</p>
+
+<p>Below the YAML front matter, enter the content of the post in Markdown
+format.  Images should be placed in <code>img/blog/free</code> if they are
+MIT-licensed or <code>img/blog/nonfree</code> if they have a more restrictive
+copyright license.</p>
+
+<h3>
+<a id="developer-pgp-keys" class="anchor" href="#developer-pgp-keys" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developer PGP keys</h3>
+
+<p>The site hosts the PGP keys for several Bitcoin Core contributors. Here
+are some notes about updating those keys based on previous experience:</p>
+
+<ol>
+<li>If a key is revoked, update the key with the revocation immediately.
+Anyone with commit access to the site repository may do this without
+prior review, but they should post the commit ID to an open issue or
+PR so other people can review it. After the revoked key is uploaded,
+discussion about verifying/adding a replacement key may continue at a
+slower pace.
+1.<a href="https://live.blockcypher.com/btc/address/1AWLGkNTFgaDKyLxXtszPChd2yX54uBrRm/">https://live.blockcypher.com/btc/address/1AWLGkNTFgaDKyLxXtszPChd2yX54uBrRm/</a>
+</li>
+</ol>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/parker24j">parker24j</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("(94.255.132.94");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
